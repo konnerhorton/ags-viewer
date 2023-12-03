@@ -2,7 +2,8 @@
 
 A [Streamlit](https://streamlit.io/) app to explor an [`.ags` geotechnical data](https://www.ags.org.uk/data-format/) file.
 
-## Functionality
+As of 2023-12-03 this is very much a work in progress. Some functionality goals for this are:
+
 1. Allow the user to upload a `.ags` file and perform some vailidations on it:
     - It is, in fact, an `.ags` file. Use the [ags-validator](https://gitlab.com/ags-data-format-wg/agsi-validator-library) built by the [AGS working group](https://gitlab.com/ags-data-format-wg)
     - Check for conflicts in geology (provide a warning to the user):
@@ -16,6 +17,5 @@ A [Streamlit](https://streamlit.io/) app to explor an [`.ags` geotechnical data]
     - Histogram with normal distribution (or log for permeability data).
     - Grain size distribution box plots.
     - RQD or other rock properties (on a box plot or similar).
-
 
 Example file is provided by the [AGS working group](https://gitlab.com/ags-data-format-wg/AGS_X.0)
