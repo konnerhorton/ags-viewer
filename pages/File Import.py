@@ -14,7 +14,7 @@ from utilities.ags_names import AGS_VERBOSE_MAP
 input_ags = "data/East West Rail BGS Pre October 2018 upload (partial).ags"
 
 tables, headings = AGS4.AGS4_to_dataframe(
-    "data/East West Rail BGS Pre October 2018 upload (partial).ags"
+    "../data/East West Rail BGS Pre October 2018 upload (partial).ags"
 )
 
 table_dict = {k: v for k, v in AGS_VERBOSE_MAP.items() if k in headings.keys()}
