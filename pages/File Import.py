@@ -46,9 +46,10 @@ if ags_input:
         file_path = tmp_file.name
 
 try:
-    for k in AGS4.check_file(file_path).keys():
+    results = AGS4.check_file(file_path)
+    for k in results.keys():
         st.write(k)
-        st.dataframe(AGS4.check_file(file_path)[k], use_container_width=True)
+        st.dataframe(results[k], use_container_width=True)
 
 except:
     st.write(

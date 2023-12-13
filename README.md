@@ -1,6 +1,6 @@
 # AGS Viewer
 
-A [Streamlit](https://streamlit.io/) app to explor an [`.ags` geotechnical data](https://www.ags.org.uk/data-format/) file.
+A [Streamlit](https://streamlit.io/) app to explore an [`.ags` geotechnical data](https://www.ags.org.uk/data-format/) file.
 
 As of 2023-12-03 this is very much a work in progress. Some functionality goals for this are:
 
