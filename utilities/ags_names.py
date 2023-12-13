@@ -33,3 +33,5 @@ AGS_VERBOSE_MAP = {
     "RELD": "Relative density test",
     "STCN": "Static cone penetration test",
 }
+
+REFERENCE_TABLES = ["PROJ", "ABBR", "DICT", "TRAN", "TYPE", "UNIT"]
