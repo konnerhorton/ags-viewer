@@ -2,3 +2,4 @@ numpy==1.26.2
 pandas==1.5.3
 python-ags4==0.4.1
 plotly==5.9.0
+pyproj==3.4.1
