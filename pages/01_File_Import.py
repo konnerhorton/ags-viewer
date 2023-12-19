@@ -9,13 +9,14 @@ import streamlit as st
 
 
 # Import local libries
-from utilities.ags_names import AGS_VERBOSE_MAP
+from utilities.ags_utils import ags_to_dfs
+from utilities.ags_utils import AGS_VERBOSE_MAP
 
 # Identify example file
 example_ags = "data/East West Rail BGS Pre October 2018 upload (partial).ags"
 file_path = example_ags
 
-st.header("Upload and validate")
+st.header("Upload and validate your file")
 st.markdown(
     """Use the sidebar (to the left) to upload your `.ags` file. The `AGS4.check_file()`
     function will validate the file. Output from `check_file()` will be displayed below
@@ -30,6 +31,9 @@ st.markdown(
 st.markdown(
     """For a complete list of rules, refer to the documentation available at the
     [AGS website](https://www.ags.org.uk/data-format/ags4-data-format/ags-4-1/)"""
+)
+st.markdown(
+    """Once your file is uploaded and validated, use the sidebar to navigate to other pages to explore your data."""
 )
 
 # Prompt user for input file
@@ -47,6 +51,7 @@ if ags_input:
 
 try:
     results = AGS4.check_file(file_path)
+    st.session_state.ags_data = ags_to_dfs(file_path)
     for k in results.keys():
         st.write(k)
         st.dataframe(results[k], use_container_width=True)
@@ -55,3 +60,4 @@ except:
     st.write(
         "Sorry, looks like this is not `.ags` compatible. Please check the contents and try again."
     )
+# st.write(type(ags_to_dfs(file_path)))

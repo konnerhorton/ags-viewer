@@ -1,3 +1,17 @@
+# Import third party libraries
+import pandas as pd
+from python_ags4 import AGS4
+
+
+def ags_to_dfs(ags):
+    # Load `.ags` as dict-like objects of tables and headings
+    tables, headings = AGS4.AGS4_to_dataframe(ags)
+
+    # Remove the top two rows in the tables and store as df's in a dict
+    dfs = {i: tables[i].loc[2:] for i in tables.keys()}
+    return dfs
+
+
 AGS_VERBOSE_MAP = {
     "PROJ": "Project Information",
     "ABBR": "Abbreviation Definitions",
