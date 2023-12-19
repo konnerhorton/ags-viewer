@@ -5,7 +5,7 @@
 import streamlit as st
 
 
-# Import local libries
+st.title("Getting Started")
 
 with open("README.md", "r") as README:
     introduction = README.read()
