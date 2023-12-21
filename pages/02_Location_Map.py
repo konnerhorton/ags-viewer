@@ -9,7 +9,6 @@ from utilities.ags_utils import ags_to_dfs
 from utilities.ags_utils import AGS_VERBOSE_MAP
 
 st.title("Location Map")
-st.session_state.ags_data
 st.markdown(
     """Here, you can use the sidebar (to the left) to provide the Coordinate Reference System (CRS) to use for your project. The CRS you select should be one of those available at [epsg.io](https://epsg.io/). If you're project can not be represented by a standard value from [epsg.io](https://epsg.io/), you will have to use the closest approximation (and don't put too much stock in the precision on the map). This could be the case for Canada and Australia, where the use of grid shift files is common."""
 )
